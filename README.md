@@ -1,2 +1,2 @@
 # go_projects
-This repository is made to for all my Mini-Projects and Projects that i have done and completed in way of learning Golang
+This repository is made for my Mini-Projects and Projects that i have done and completed during my way of learning Golang
