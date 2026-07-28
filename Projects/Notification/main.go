@@ -2,8 +2,8 @@ package main
 
 import (
 	"Notification/entities"
+	"Notification/externalServices"
 	"Notification/services"
-	"fmt"
 )
 
 func main() {
@@ -11,13 +11,12 @@ func main() {
 	orderAmir := entities.Order{
 		ID:           1,
 		UserFullName: "amirreza",
+		UserId:       "55",
 		UserPhone:    "09930007410",
 		Price:        float64(100),
 		Status:       true,
 	}
 
-	orderService := services.NewOrderService()
+	orderService := services.NewOrderService(externalServices.NewSmsService())
 	orderService.CreateOrder(&orderAmir)
-	fmt.Printf("Order Created! %v\n", orderAmir)
-
 }

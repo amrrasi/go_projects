@@ -7,20 +7,18 @@ import (
 )
 
 type OrderService struct {
-	emailService *externalServices.EmailService
-	smsService   *externalServices.SmsService
+	Notifier externalServices.Notifier
 }
 
-func (o *OrderService) CreateOrder(order *entities.Order) *entities.Order {
+func (orderService *OrderService) CreateOrder(order *entities.Order) *entities.Order {
 	fmt.Printf("Created order! %v\n", order)
-	o.emailService.SendMessage(order)
-	o.smsService.SendMessage(order)
+	orderService.Notifier.SendNotify(order.UserId, "order created")
+
 	return order
 }
 
-func NewOrderService() *OrderService {
+func NewOrderService(notifier externalServices.Notifier) *OrderService {
 	return &OrderService{
-		emailService: externalServices.NewEmailService(),
-		smsService:   externalServices.NewSmsService(),
+		Notifier: notifier,
 	}
 }
