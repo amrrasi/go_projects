@@ -46,6 +46,6 @@ func GenericString() {
 	list1.RemoveItem(0)
 	fmt.Printf("%v\n", list1.Items)
 
-	list1.Remove("Sadra")gi
+	list1.Remove("Sadra")
 	fmt.Printf("%v\n", list1.Items)
 }
