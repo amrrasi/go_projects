@@ -5,3 +5,11 @@
 2026/08/01 13:22:20 Start ovf Sum
 2026/08/01 13:22:20 End of Sum
 2026/08/01 13:22:20 End of main
+2026/08/01 13:49:46 main.go:19: Start of main
+2026/08/01 13:49:46 main.go:26: Start ovf Sum
+2026/08/01 13:49:46 main.go:28: End of Sum
+2026/08/01 13:49:46 main.go:21: End of main
+error: 2026/08/01 13:58:04 main.go:31: Start of main
+Info: 2026/08/01 13:58:04 main.go:38: Start ovf Sum
+Info: 2026/08/01 13:58:04 main.go:40: End of Sum
+error: 2026/08/01 13:58:04 main.go:33: End of main
