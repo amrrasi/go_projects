@@ -1,7 +1,6 @@
 package main
 
 import (
-	//"github.com/go-test/deep"
 	"fmt"
 	"io"
 	"net/http"
