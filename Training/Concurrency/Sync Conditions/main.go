@@ -15,7 +15,7 @@ func main() {
 }
 
 func Streaming() {
-	condition := sync.Cond{L: &sync.Mutex{}}
+	condition := sync.NewCond(&sync.Mutex{})
 	for i := 0; i < 1000; i++ {
 		go NewRequest(i, condition)
 	}
@@ -40,8 +40,8 @@ func checking(userId int, condition *sync.Cond) {
 	condition.L.Lock()
 	defer condition.L.Unlock()
 
-	userList = append(userList, userId)
-	if len(userList) == 55 {
+	usrList = append(usrList, userId)
+	if len(usrList) == 55 {
 		ready = true
 		condition.Broadcast()
 		println("Streaming Started", userId)
