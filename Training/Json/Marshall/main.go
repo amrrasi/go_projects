@@ -11,7 +11,7 @@ type Person struct {
 func main() {
 
 	Person1 := Person{Name: "Amir", Family: "Askari", Age: 22}
-	Person2 := Person{Name: "Ali", Family: "izi", Age: 0}cd 
+	Person2 := Person{Name: "Ali", Family: "izi", Age: 0}
 
 	Person1Json, err := json.Marshal(Person1)
 	if err != nil {
