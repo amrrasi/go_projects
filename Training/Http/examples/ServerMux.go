@@ -15,7 +15,6 @@ func CreateServerWithMux() {
 		Addr:         ":8080",
 		ReadTimeout:  time.Second * 10,
 		WriteTimeout: time.Second * 10,
-		Handler:      Testhandler{},
 	}
 
 	err1 := server1.ListenAndServe()
@@ -27,3 +26,5 @@ func CreateServerWithMux() {
 func (h Testhandler) ServerHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello World")
 }
+
+// will be done later
