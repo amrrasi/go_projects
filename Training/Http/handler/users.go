@@ -20,14 +20,12 @@ func (h UserHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		GetUserList(w, r)
 		return
 	case r.Method == "POST":
-		CreateUser(w, r)
 		return
 	}
 
 }
 
 func CreateUser(u model.User, w http.ResponseWriter, r *http.Request) {
-	authorizationKey := r.Header.Get("x-Authorization")
 }
 
 func GetUser(w http.ResponseWriter, r *http.Request) {
